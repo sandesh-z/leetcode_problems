@@ -9,7 +9,6 @@ class Solution:
                 continue
             if(nums.count(item)>majority):
                 majority=nums.count(item)
-                majority=nums.count(item)
                 majority_index=i
             
             
