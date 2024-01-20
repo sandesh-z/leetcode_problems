@@ -5,7 +5,6 @@ class Solution:
          n = len(nums)
 
          for i in range(n):
-            print(i,max_reach)
             # Check if it's possible to reach the current index
             if i > max_reach:
                 return False
@@ -23,5 +22,7 @@ s = Solution()
 # mylist = [2,3,1,1,4]
 
 # mylist = [3,3,1,2,4]
-mylist=[3,2,1,0,4]
+# mylist=[3,2,1,0,4]
+# mylist =[2, 4, 1, 1, 0, 2, 3]
+mylist = [3,1,1]
 print(s.canJump(mylist))    
