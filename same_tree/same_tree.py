@@ -1,4 +1,9 @@
-# Definition for a binary tree node.
+"""
+Given the roots of two binary trees p and q,
+write a function to check if they are the same or not.
+Two binary trees are considered the same if they are structurally identical,
+and the nodes have the same value.
+"""
 from typing import Optional
 
 class TreeNode:
@@ -29,6 +34,5 @@ root.right = TreeNode(20)
 root2 = TreeNode(3)
 root2.left = TreeNode(9)
 root2.right = TreeNode(20)
-root2.left.left = TreeNode(20)
 
 print(s.isSameTree(root,root2))
