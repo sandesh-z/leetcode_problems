@@ -19,10 +19,10 @@ class Solution:
 
         elif(root and root.left and not root.right):
             root.left,root.right = None,root.left
-            self.invertTree(root.left)  
+            self.invertTree(root.right)  
         elif(root and root.right and not root.left):
             root.left,root.right = root.right,None
-            self.invertTree(root.right)     
+            self.invertTree(root.left)     
             
         return root
        
