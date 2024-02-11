@@ -24,14 +24,16 @@ class TreeNode:
         self.right = right
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        count = 0
-        if root:
-            count+=1
-            if root.left:
-                count+1
-            if root.right:
-                count+1
-            return count + self.countNodes(root.left)+self.countNodes(root.right)
+        if root is None:
+            return 0
+    
+        count = 1
+        
+        if root.left:
+            count += self.countNodes(root.left)
+        if root.right:
+            count += self.countNodes(root.right)
+            
         return count
     
 s = Solution()
