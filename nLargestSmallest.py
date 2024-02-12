@@ -1,8 +1,8 @@
 from typing import List
-def findNLargestOrSmallest(self,nList:List[int],n,findSmallest =False)-> int:
-        if(n==1):
+def findNLargestOrSmallest(nList:List[int],n,findSmallest =False)-> int:
+        if(len(nList)==1):
              return nList[0]
-        if(n>len(nList)-1 or n<=0):
+        if(n>len(nList) or n<=0):
             return -1
         count =1
         largest = nList[0]
@@ -16,4 +16,7 @@ def findNLargestOrSmallest(self,nList:List[int],n,findSmallest =False)-> int:
         else:        
             count+1
             nList.remove(largest)
-            return self.findNLargestOrSmallest(nList,n-1,findSmallest)
+            return findNLargestOrSmallest(nList,n-1,findSmallest)
+        
+nums =  [1,2,3,4,5]      
+print(findNLargestOrSmallest(nums,2,False))        
